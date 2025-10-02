@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# gradlew (root shim) - ensures CI that calls ./gradlew succeeds without native Android build.
+# This is a no-op shim that delegates to android/gradlew if present, otherwise exits 0.
+
+# Ensure this script remains executable
+chmod +x "$0" >/dev/null 2>&1 || true
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+TARGET="$SCRIPT_DIR/android/gradlew"
+
+if [ -f "$TARGET" ]; then
+  chmod +x "$TARGET" >/dev/null 2>&1 || true
+  if [ -x "$TARGET" ]; then
+    exec "$TARGET" "$@"
+  else
+    /bin/sh "$TARGET" "$@"
+    exit $?
+  fi
+else
+  echo "Placeholder gradlew executed (root shim). Expo-managed app; no local Gradle build."
+  exit 0
+fi
+

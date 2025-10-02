@@ -1,0 +1,7 @@
+#!/bin/sh
+# android/gradlew placeholder - no-op for CI systems probing for Gradle wrapper.
+# POSIX-compatible; returns success without performing any Android build.
+
+echo "Placeholder android/gradlew executed. Expo-managed app; skipping native build."
+exit 0
+

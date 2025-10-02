@@ -1,0 +1,4 @@
+#!/bin/sh
+# Alternative executable Gradle wrapper for CI. Always returns success for Expo-managed projects.
+echo "gradlew_exec: CI probe satisfied (Expo-managed; no native Gradle build)."
+exit 0

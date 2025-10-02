@@ -1,0 +1,13 @@
+# Preserve LF and executable bit for gradle wrapper shims
+gradlew text eol=lf linguist-generated
+gradlew -text -diff
+gradlew eol=lf
+gradlew linguist-vendored
+gradlew export-ignore
+gradlew merge=union
+gradlew binary
+gradlew chmod=+x
+
+gradlew.sh text eol=lf
+scripts/** text eol=lf
+*.sh text eol=lf

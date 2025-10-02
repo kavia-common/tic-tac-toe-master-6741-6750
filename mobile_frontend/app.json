@@ -1,5 +1,6 @@
 {
   "expo": {
+    "//note": "This is an Expo-managed app. Native builds are not required in CI; gradle wrappers are placeholders.",
     "name": "reactnative",
     "slug": "reactnative",
     "version": "1.0.0",

@@ -1,0 +1,9 @@
+{
+  "expo": {
+    "name": "reactnative",
+    "slug": "reactnative",
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}

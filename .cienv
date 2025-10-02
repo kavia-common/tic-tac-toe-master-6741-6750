@@ -1,0 +1,3 @@
+# Hints for CI pipelines
+NO_NATIVE_GRADLE_BUILD=true
+EXPO_MANAGED_WORKFLOW=true

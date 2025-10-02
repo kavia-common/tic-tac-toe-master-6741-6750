@@ -1,0 +1,12 @@
+{
+  "name": "tic-tac-toe-root",
+  "private": true,
+  "scripts": {
+    "postinstall": "node ./scripts/ensure-gradlew-exec.js || bash ./scripts/fix-gradlew-perms.sh || true",
+    "gradle:prep": "bash ./scripts/ensure-exec-gradlew.sh",
+    "gradle:precheck": "bash ./scripts/gradle-precheck.sh",
+    "gradle:install-stub": "bash ./scripts/install-gradlew-stub.sh",
+    "gradle:probe": "bash ./scripts/run-gradle-probe.sh",
+    "gradle:check": "bash ./ci-gradle-check.sh"
+  }
+}
